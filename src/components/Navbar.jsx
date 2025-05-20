@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
-      <div className="border-b border-gray-300">
-        <div className="flex gap-3 justify-between">
+      <div className="border-b border-gray-300 justify-between">
+        <div className="flex gap-3">
           <img
             src="/images/logo.avif"
             alt="movieLogo"
