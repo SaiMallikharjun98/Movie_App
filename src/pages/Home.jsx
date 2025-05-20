@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
       <Link to="/details" state={{ movie }}>
-        <div className="w-[200px] my-5 mx-auto">
+        <div className="w-[200px] my-20 mx-auto">
           <img
             src={movie.Poster}
             className="h-30 w-30 object-cover mx-auto"

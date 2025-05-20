@@ -21,7 +21,7 @@ function Details() {
 
   return (
     <>
-      <div className="w-[500px] mx-auto my-15 ">
+      <div className="w-[520px] mx-auto my-20 ">
         <div className="flex gap-6">
           <img
             src={movie.Poster}
