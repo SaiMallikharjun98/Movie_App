@@ -26,7 +26,7 @@ function Home() {
         <div className="w-[200px] my-5 mx-auto">
           <img
             src={movie.Poster}
-            className="h-10 w-10 object-cover mx-auto"
+            className="h-30 w-30 object-cover mx-auto"
             alt={movie.Title}
           />
           <h3 className="text-2xl">{movie.Title}</h3>

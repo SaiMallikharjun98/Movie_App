@@ -21,11 +21,11 @@ function Details() {
 
   return (
     <>
-      <div className="w-[300px] mx-auto my-8 ">
+      <div className="w-[300px] mx-auto my-15 ">
         <div className="flex gap-4">
           <img
             src={movie.Poster}
-            className="h-30 w-30 object-cover mx-auto"
+            className="h-60 w-60 object-cover mx-auto"
             alt={movie.Title}
           />
           <div>
