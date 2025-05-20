@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <>
       <div className="border-b border-gray-300">
-        <div className="flex gap-3 justify-end">
+        <div className="flex gap-3 justify-between">
           <img
             src="/images/logo.avif"
             alt="movieLogo"

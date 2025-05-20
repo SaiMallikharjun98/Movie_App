@@ -25,7 +25,7 @@ function Details() {
         <div className="flex gap-6">
           <img
             src={movie.Poster}
-            className="h-60 w-60 object-cover mx-auto"
+            className="h-60 w-60 object-cover mx-auto align-center"
             alt={movie.Title}
           />
           <div>
