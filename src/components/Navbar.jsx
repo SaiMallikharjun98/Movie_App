@@ -11,7 +11,7 @@ function Navbar() {
             className="w-15 h-10 p-2"
           />
           <h1 className="text-2xl">Movies</h1>
-          <div className="justify-between">
+          <div className="flex gap-4 justify-between">
             <Link to="/" className="text-2xl hover:text-blue-700">
               Home
             </Link>
