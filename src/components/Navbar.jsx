@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
-      <div className="border-b border-gray-300 justify-between">
+      <div className="border-b border-gray-300 ">
         <div className="flex gap-3">
           <img
             src="/images/logo.avif"
@@ -11,12 +11,14 @@ function Navbar() {
             className="w-15 h-10 p-2"
           />
           <h1 className="text-2xl">Movies</h1>
-          <Link to="/" className="text-2xl hover:text-blue-700">
-            Home
-          </Link>
-          <Link to="/details" className="text-2xl hover:text-blue-700">
-            Details
-          </Link>
+          <div className="justify-between">
+            <Link to="/" className="text-2xl hover:text-blue-700">
+              Home
+            </Link>
+            <Link to="/details" className="text-2xl hover:text-blue-700">
+              Details
+            </Link>
+          </div>
         </div>
       </div>
     </>
