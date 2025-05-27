@@ -10,7 +10,7 @@ function Home() {
   const [error, setError] = useState(null);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const query = searchParams.get("s") || "Thriller";
+  const query = searchParams.get("s") || "Marvel";
   useEffect(() => {
     axios
       .get(`${baseUrl}?apikey=${apiKey}&s=${query}`)
