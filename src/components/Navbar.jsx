@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-// import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 
 function Navbar() {
@@ -25,7 +24,7 @@ function Navbar() {
 
           <form
             onSubmit={searchHandler}
-            className="flex items-center gap-2 bg-gray-100 p-2 rounded-lg"
+            className="flex items-center gap-4 bg-gray-100 p-2 rounded-lg"
           >
             <input
               type="text"
@@ -34,11 +33,14 @@ function Navbar() {
               onChange={(e) => setQuery(e.target.value)}
               className="bg-transparent outline-none w-40 md:w-64"
             />
-            {/* <button type="submit" className="text-pink-500 hover:text-pink-700">
-              <FaSearch />
-            </button> */}
+            <button
+              type="submit"
+              className="text-pink-500 hover:text-pink-700 cursor-pointer"
+            >
+              <i className="bi bi-search"></i>
+            </button>
           </form>
-          <div className="flex gap-4">
+          <div className="flex gap-8">
             <Link to="/" className="text-2xl hover:text-blue-700">
               Home
             </Link>

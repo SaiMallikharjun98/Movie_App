@@ -28,7 +28,7 @@ function Home() {
         setError("Error fetching movies");
         setLoading(false);
       });
-  }, []);
+  }, [query]);
   if (loading) {
     return <div className="text-center mt-10 text-gray-600">Loading...</div>;
   }

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Navbar from "./components/Navbar";
