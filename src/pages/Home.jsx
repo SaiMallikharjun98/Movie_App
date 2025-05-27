@@ -1,15 +1,19 @@
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Home() {
   const baseUrl = import.meta.env.VITE_API_BASE_URL;
+  const apiKey = import.meta.env.VITE_OMDB_API_KEY;
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const query = searchParams.get("s") || "Marvel";
   useEffect(() => {
     axios
-      .get(baseUrl)
+      .get(`${baseUrl}?apikey=${apiKey}&s=${query}`)
       .then((response) => {
         console.log(response.data);
         if (response.data.Response === "True") {
@@ -38,7 +42,11 @@ function Home() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {movies.map((movie) => (
-            <Link key={movie.imdbID} to="/details" state={{ movie }}>
+            <Link
+              key={movie.imdbID}
+              to={`/details/${movie.imdbID}`}
+              state={{ movie }}
+            >
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <img
                   src={
